@@ -431,11 +431,9 @@ async function loadModel(name: string) {
     appRenderer.updateEnvironment();
           // load case core
     const patientIds = cases.value?.names as string[];
-    console.log(patientIds);
     
     if ((patientIds).length > 0 && !!patientIds) {
   
-        
         if(patientIds.includes(patientId)){
           switchAnimationStatus("flex", "Prepare Nrrd files, please wait......");
           currentCaseId = patientId;
@@ -449,7 +447,6 @@ async function loadModel(name: string) {
           }
           loadAllNrrds(urls, "registration");
         }
-        
       }
   }
 }
