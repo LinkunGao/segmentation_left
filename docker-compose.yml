@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend_dockerfile
+    container_name: my_vue_app
+    ports:
+      - "5173:5173"
